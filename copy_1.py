@@ -119,6 +119,7 @@ def post_RepoMilestones(user_name,repo_name,milestones):
             "title": milestone['title'],
             "state": milestone['state'],
             "description": milestone['description'],
+            "due_on": milestone.get('due_on')
             
         }
 
@@ -168,24 +169,28 @@ def post_RepoIssues(user_name, repo_name, issues):
 
 def main():
     #Get requests
-    user_name ="AI-Assistant"
+    user_name ="AI-Assistant" 
     organisation_name = "GSO-SW"
     user_repo = "ELearning"
-    org_repo_get = "MultiTool"
+    org_repo_get = "BFT31MultiTool"
 
     #Post requests
-    org_repo_post = "FOI21MultiTool"
+    org_repo_post = "BFT32MultiTool"
 
 
 
-
+    #Testing to get information
     #org_repositorys = get_OgranisationRepos(organisation_name).json()
     #spec_repo = get_UserRepo(organisation_name,org_repo).json()
     
+    #1. First copy the milestones (Check if the milestone exist after copying)
+    # spec_repo_milestones = get_RepoMilestones(organisation_name,org_repo_get)
+    # post_RepoMilestones(organisation_name,org_repo_post,spec_repo_milestones)
+    
+    #2. Then copy the issues
+    #Due to limitations of GitHub API, the script runs multiple times to copy all issues (script will not copy issues with the same title, body and milestone)
+    #Github API allows only limited number of requests per hour so you have to wait for a while when you got many issues
     spec_repo_issues = get_RepoIssues(organisation_name,org_repo_get)
-    spec_repo_milestones = get_RepoMilestones(organisation_name,org_repo_get)
-
-    #post_RepoMilestones(organisation_name,org_repo_post,spec_repo_milestones)
     
     status_code = 0
 
