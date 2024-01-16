@@ -169,11 +169,11 @@ def post_RepoIssues(user_name, repo_name, issues):
 
 def main():
     #Get requests
-    organisation_name = "GSO-SW" #Name of the organisation
-    org_repo_get = "BFT31MultiTool" #Name of the repository to copy from
+    organisation_name = "ORGANISATION" #Name of the organisation
+    org_repo_get = "RepoWithIssues" #Name of the repository to copy from
 
     #Post requests
-    org_repo_post = "BFT32MultiTool" #Name of the repository to copy to
+    org_repo_post = "RepoWithoutIssues" #Name of the repository to copy to
 
 
 
@@ -201,17 +201,6 @@ def main():
             break
 
 
-
-
-
-
-
-
-
 if __name__ == "__main__":
 
     main()
-
-
-
-
