@@ -169,13 +169,11 @@ def post_RepoIssues(user_name, repo_name, issues):
 
 def main():
     #Get requests
-    user_name ="AI-Assistant" 
-    organisation_name = "GSO-SW"
-    user_repo = "ELearning"
-    org_repo_get = "BFT31MultiTool"
+    organisation_name = "GSO-SW" #Name of the organisation
+    org_repo_get = "BFT31MultiTool" #Name of the repository to copy from
 
     #Post requests
-    org_repo_post = "BFT32MultiTool"
+    org_repo_post = "BFT32MultiTool" #Name of the repository to copy to
 
 
 
