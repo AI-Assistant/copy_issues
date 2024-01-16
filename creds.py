@@ -1,1 +1,1 @@
-api_key=f'yourTokenHere'
+api_key=f'yourTokenHere'#<-- your token here
