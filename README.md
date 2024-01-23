@@ -1,7 +1,7 @@
 # GitHub Repository Management Tool
 
 ## Overview
-This Python tool is designed to manage GitHub repositories within an organization. It automates the process of copying milestones and issues from one repository to another within the same organization. This is particularly useful for maintaining consistency across different projects within an organization.
+This Python tool is designed to manage GitHub repositories. It automates the process of copying milestones and issues from one repository to another.
 
 ## Features
 - **Get Organization Repositories**: Fetches all repositories under a specific organization.
